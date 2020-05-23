@@ -1,0 +1,8 @@
+#!/usr/bin/perl -w
+use strict;
+# this is my first perl program
+print ("Hello World!\n");
+# \n is special character that will print new line character \t is tab \" is a quote
+print ("This is my first Perl program. \n\n");
+
+#this is a comment - ignored by perl if have #

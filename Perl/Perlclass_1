@@ -1,0 +1,55 @@
+#!/usr/bin/perl -w
+use strict;
+# this is my first perl program
+print ("Hello World!\n");
+# \n is special character that will print new line character \t is tab \" is a quote
+print ("This is my first Perl program. \n\n");
+
+#this is a comment - ignored by perl if have #
+print ("What is your name?");
+my $yourName;
+$yourName = <>;
+chomp($yourName);
+my $lastName;
+
+print "Hi $yourName, nice to meet you!\n\n";
+print "Hey $yourName, what is your last name?";
+$lastName = <>;
+chomp ($lastName);
+my $fullName = $yourName . " " . $lastName;
+#The . will concatenate and adding a space is done with " "
+print "Hello $fullName \n\n";
+
+
+my $i;
+my @Arr;
+my %testHash;
+
+$i = 100;
+print "i = $i\n";
+print 'i = $i\n';
+
+@Arr = ("AACGTT", "TCGCGA", "CTCGAG", "AAATTT", "CGCGCG");
+my @Arr2 = ("R1", "RII", "RIII", "RIV", "RV");
+
+my $length = @Arr;
+
+print "The length of the array is $length\n";
+
+for(my $x = 0; $x < $length; $x++){
+	print "x = $x\t$Arr[$x]\t$Arr2[$x]\n";
+	$testHash{$Arr2[$x]} = $Arr[$x];
+}
+
+my @k = sort(keys(%testHash));
+my $numK = @k;
+for(my $i = 0; $i < $numK; $i++) {
+	print "$k[$i]\t$testHash{$k[$i]}\n";
+}
+
+#$x++ will add one each time;
+#$x-- will subtract one each time;
+#$x+=5 will add 5 each time;
+#$x-10 will substract 10 each time;
+
+
